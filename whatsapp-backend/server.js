@@ -4,8 +4,10 @@ import mongoose from 'mongoose';
 import dbMessages from './dbMessages.js';
 import Pusher  from 'pusher';
 import cors from 'cors';
+import connection_url from './env.js';
 
 //app config
+
 const app=express()
 const port = process.env.PORT || 9000
 
@@ -23,8 +25,8 @@ app.use(express.json());
 app.use(cors())
 
 
+
 //DB config
-const connection_url='mongodb+srv://admin:NKU9tlNg274lxf2c@cluster0.7fpmt.mongodb.net/whatsappdb?retryWrites=true&w=majority'
 mongoose.connect(connection_url,{
     useCreateIndex:true,
     useNewUrlParser:true,
