@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import dbMessages from './dbMessages.js';
 import Pusher  from 'pusher';
 import cors from 'cors';
-import connection_url from './env.js';
+import connection_url from './env.js';  // In ev.js file I store a const variable which keeps my url for DB. I just exported it to here.
 
 //app config
 
